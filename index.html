@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="img/calculator_icon.ico" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Calculator</title>
+  </head>
+  <body onload="load()">
+    <div class="calc-body">
+      <input type="text" aria-selected oninput="chFunction()" />
+      <div class="calc-buttons">
+        <span
+          style="font-size: 20px; font-weight: 100"
+          onclick="deleteContent()"
+          ><i class="fa fa-arrow-left" aria-hidden="true"></i
+        ></span>
+        <span onclick="erase()">C</span>
+        <span onclick="roundBrackets()">( )</span>
+        <span onclick="typeFunction(`/`)">/</span>
+        <span onclick="typeFunction(7)">7</span>
+        <span onclick="typeFunction(8)">8</span>
+        <span onclick="typeFunction(9)">9</span>
+        <span onclick="typeFunction(`*`)">x</span>
+        <span onclick="typeFunction(4)">4</span>
+        <span onclick="typeFunction(5)">5</span>
+        <span onclick="typeFunction(6)">6</span>
+        <span onclick="typeFunction(`-`)">-</span>
+        <span onclick="typeFunction(1)">1</span>
+        <span onclick="typeFunction(2)">2</span>
+        <span onclick="typeFunction(3)">3</span>
+        <span onclick="typeFunction(`+`)">+</span>
+        <span onclick="typeFunction(0)">0</span>
+        <span onclick="typeFunction(`.`)">.</span>
+        <span id="equal" onclick="equal()">=</span>
+      </div>
+    </div>
+    <script src="js/calculator.js"></script>
+  </body>
+</html>
