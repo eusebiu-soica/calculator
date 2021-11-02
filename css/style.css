@@ -81,3 +81,10 @@ input[type="text"] {
   text-align: right;
   outline: none;
 }
+
+@media (max-width: 900px) {
+  .calc-body {
+    height: 450px;
+    width: 350px;
+  }
+}

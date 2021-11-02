@@ -7,7 +7,6 @@ let num = /[0-9]/g;
 
 // load function and enter key result
 function load() {
-  input.focus();
   input.addEventListener("keyup", function (event) {
     if (event.keyCode === 13) {
       document.getElementById("equal").click();
@@ -32,7 +31,6 @@ input.addEventListener("keyup", function (event) {
 // write in input function
 function typeFunction(n) {
   input.value += n;
-  input.focus();
 }
 
 // equal function
@@ -40,7 +38,6 @@ function equal() {
   try {
     rez = eval(input.value);
     input.value = rez;
-    input.focus();
   } catch (err) {
     input.value = "Eroare";
     console.log(err);
@@ -50,13 +47,11 @@ function equal() {
 // delete one by one content function
 function deleteContent() {
   input.value = input.value.slice(0, -1);
-  input.focus();
 }
 
 // clear input function
 function erase() {
   input.value = "";
-  input.focus();
 }
 
 // Round brackets function
@@ -72,5 +67,4 @@ function roundBrackets() {
     val.push(round);
     input.value += round;
   }
-  input.focus();
 }
